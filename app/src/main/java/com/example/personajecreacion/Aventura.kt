@@ -11,7 +11,8 @@ class Aventura : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aventura)
 
-        val personaje : Personaje? = intent.getParcelableExtra("Personaje")
+        val personaje : Personaje? = intent.getParcelableExtra("Personaje",
+            Personaje::class.java)
         val dado : ImageButton = findViewById(R.id.dado)
 
         dado.setOnClickListener{
